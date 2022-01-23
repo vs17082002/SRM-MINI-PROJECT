@@ -1,0 +1,166 @@
+#include <stdio.h>  
+#include <math.h>
+int main()  
+{  
+    // declare local variables  
+    char opt;  
+    float n1, n2;   
+    float res,x; 
+    printf("\n\t******C MINI PROJECT******\n");
+    printf("\t******By Vaibhav & Manoj******\n");
+    printf("\t*****C CALCULATOR*****\n");
+    printf ("  Choose an operator\n  + for Addition,\n  - for Subtraction,\n");
+    printf("  * for Multiplication,\n  / for Division,\n  s for sin,\n");  
+    printf("  c for cos,\n  t for tan,\n  o for cot,\n  e for sec,\n  a for cosec\n");
+    printf("  g for Greatest Integer,\n  f for Fractional Part,\n");
+    printf("  to perform the operation in C Calculator \n");
+    scanf ("\t%c", &opt); // take an operator  
+    if (opt == '/' )  
+    {  
+        printf (" You have selected: Division");  
+    }  
+    else if (opt == '*')  
+    {  
+        printf (" You have selected: Multiplication");  
+     }  
+       
+    else if (opt == '-')  
+    {  
+        printf (" You have selected: Subtraction");  
+     }  
+        else if (opt == '+')  
+    {  
+        printf (" You have selected: Addition");  
+     }
+     else if (opt == 's')  
+    {  
+        printf (" You have selected: sin");  
+     } 
+     else if (opt == 't')  
+    {  
+        printf (" You have selected: tan");  
+     } 
+     else if (opt == 'c')  
+    {  
+        printf (" You have selected: cos");  
+     } 
+     else if (opt == 'o')  
+    {  
+        printf (" You have selected: cot");  
+     } 
+     else if (opt == 'e')  
+    {  
+        printf (" You have selected: sec");  
+     } 
+     else if (opt == 'a')  
+    {  
+        printf (" You have selected: cosec");  
+     } 
+     else if (opt == 'g')  
+    {  
+        printf (" You have selected: Greatest Integer");  
+     } 
+     else if (opt == 'f')  
+    {  
+        printf (" You have selected: Fractional Part");  
+     } 
+      
+    switch(opt)  
+    {  
+        case '+':  
+            printf (" \n Enter the first number: ");  
+            scanf(" %f", &n1); // take fist number  
+            printf (" Enter the second number: ");  
+            scanf (" %f", &n2); // take second number 
+            res = n1 + n2; // add two numbers  
+            printf (" Addition of %f and %f is: %.2f", n1, n2, res);  
+            break;  
+          
+        case '-':  
+            printf (" \n Enter the first number: ");  
+            scanf(" %f", &n1); // take fist number  
+            printf (" Enter the second number: ");  
+            scanf (" %f", &n2); // take second number 
+            res = n1 - n2; // subtract two numbers  
+            printf (" Subtraction of %f and %f is: %.2f", n1, n2, res);  
+            break;  
+              
+        case '*':
+            printf (" \n Enter the first number: ");  
+            scanf(" %f", &n1); // take fist number  
+            printf (" Enter the second number: ");  
+            scanf (" %f", &n2); // take second number 
+            res = n1 * n2; // multiply two numbers  
+            printf (" Multiplication of %f and %f is: %.2f", n1, n2, res);  
+            break;            
+          
+        case '/':  
+            printf (" \n Enter the first number: ");  
+            scanf(" %f", &n1); // take fist number  
+            printf (" Enter the second number: ");  
+            scanf (" %f", &n2); // take second number         
+            if (n2 == 0)   // if n2 == 0, take another number  
+            {  
+                printf (" \n Divisor cannot be zero. Please enter another value ");  
+                scanf ("%f", &n2);        
+                }  
+            res = n1 / n2; // divide two numbers  
+            printf (" Division of %f and %f is: %.2f", n1, n2, res);  
+            break;  
+        case 's':  
+            printf("\n\nEnter degree x-");
+            scanf("%f",&x);
+            res = sin((3.14*x)/180); // sin numbers  
+            printf (" sin of %f is: %.2f", x, res);  
+            break; 
+        case 'c':  
+            printf("\n\nEnter degree x-");
+            scanf("%f",&x);
+            res = cos((3.14*x)/180); // cos numbers  
+            printf (" cos of %f is: %.2f", x, res);  
+            break;
+        case 't':  
+            printf("\n\nEnter degree x-");
+            scanf("%f",&x);
+            res = tan((3.14*x)/180);   
+            printf (" tan of %f is: %.2f", x, res);  
+            break;    
+        case 'e':  
+            printf("\n\nEnter degree x-");
+            scanf("%f",&x);
+            res = 1/cos((3.14*x)/180);   
+            printf (" sec of %f is: %.2f", x, res);  
+            break; 
+        case 'a':  
+            printf("\n\nEnter degree x-");
+            scanf("%f",&x);
+            res = 1/sin((3.14*x)/180);   
+            printf (" cosec of %f is: %.2f", x, res);  
+            break;  
+        case 'o':  
+            printf("\n\nEnter degree x-");
+            scanf("%f",&x);
+            res = 1/tan((3.14*x)/180);   
+            printf (" cot of %f is: %.2f", x, res);  
+            break;
+        case 'g':
+            printf("\n  Enter number- ");
+            scanf("  %f",&x);
+            int b=(int)x;
+            printf("  The Greatest Integer of %f : %d",x,b);
+            break;
+        case 'f':
+            printf("\n  Enter number- ");
+            scanf("  %f",&x);
+            float l=x-(int)x;
+            printf("  Fractional Part of %f : %f",x,l);
+            break;    
+        default:  /* use default to print default message if any condition is not satisfied */  
+            printf (" Something is wrong!! Please check the options ");               
+    }  
+    return 0;  
+}  
+
+
+
+
